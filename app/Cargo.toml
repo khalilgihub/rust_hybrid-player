@@ -1,0 +1,28 @@
+[package]
+name = "hybrid-app"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+hybrid-core.workspace = true
+hybrid-mpv-engine.workspace = true
+hybrid-win32-shell.workspace = true
+hybrid-shaders.workspace = true
+hybrid-media-services.workspace = true
+hybrid-ui.workspace = true
+winit.workspace = true
+raw-window-handle.workspace = true
+wgpu.workspace = true
+tokio.workspace = true
+accesskit.workspace = true
+accesskit_winit.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+image.workspace = true
+bytemuck.workspace = true
+windows.workspace = true
+windows-sys.workspace = true
+thiserror.workspace = true
+url.workspace = true
