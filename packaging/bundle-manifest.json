@@ -1,0 +1,97 @@
+{
+  "appId": "com.hybridplayer.app",
+  "productName": "Hybrid Player",
+  "version": "12.6.0",
+  "binaryName": "Hybrid Player.exe",
+  "sourceBinary": "target/release/hybrid-app.exe",
+  "icon": "hybrid-player/assets/icons/icon.ico",
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "binaries": [
+    {
+      "source": "hybrid-player/mpv/libmpv-2.dll",
+      "dest": "resources/mpv/libmpv-2.dll",
+      "required": true,
+      "minBytes": 1025
+    },
+    {
+      "source": "hybrid-player/mpv/d3dcompiler_43.dll",
+      "dest": "resources/mpv/d3dcompiler_43.dll",
+      "required": true,
+      "minBytes": 1025
+    },
+    {
+      "source": "hybrid-player/mpv/yt-dlp.exe",
+      "dest": "resources/mpv/yt-dlp.exe",
+      "required": true,
+      "minBytes": 1025
+    },
+    {
+      "source": "hybrid-player/mpv/mpv.exe",
+      "dest": "resources/mpv/mpv.exe",
+      "required": true,
+      "minBytes": 1025
+    },
+    {
+      "source": "hybrid-player/mpv/mpv.com",
+      "dest": "resources/mpv/mpv.com",
+      "required": false,
+      "minBytes": 1025
+    },
+    {
+      "source": "hybrid-player/mpv/updater.bat",
+      "dest": "resources/mpv/updater.bat",
+      "required": false,
+      "minBytes": 1
+    },
+    {
+      "source": "hybrid-player/node_modules/ffmpeg-static/ffmpeg.exe",
+      "dest": "resources/ffmpeg/ffmpeg.exe",
+      "required": true,
+      "minBytes": 1025
+    },
+    {
+      "source": "hybrid-player/node_modules/ffmpeg-static/ffmpeg.exe.LICENSE",
+      "dest": "resources/ffmpeg/ffmpeg.exe.LICENSE",
+      "required": false,
+      "minBytes": 1
+    },
+    {
+      "source": "hybrid-player/node_modules/ffmpeg-static/ffmpeg.exe.README",
+      "dest": "resources/ffmpeg/ffmpeg.exe.README",
+      "required": false,
+      "minBytes": 1
+    }
+  ],
+  "assets": [
+    "hybrid-player/assets/fonts/IBMPlexSans-Regular.ttf",
+    "hybrid-player/assets/fonts/IBMPlexSans-Medium.ttf",
+    "hybrid-player/assets/fonts/IBMPlexSans-SemiBold.ttf",
+    "hybrid-player/assets/fonts/Sora-Regular.ttf",
+    "hybrid-player/assets/fonts/Sora-SemiBold.ttf",
+    "hybrid-player/assets/fonts/Sora-Bold.ttf",
+    "hybrid-player/assets/icons/brand-lockup.svg",
+    "hybrid-player/assets/icons/brand-mark.svg",
+    "hybrid-player/assets/icons/icon-linux.png",
+    "hybrid-player/assets/icons/icon.ico",
+    "hybrid-player/assets/icons/icon.png",
+    "hybrid-player/assets/icons/icon.svg",
+    "hybrid-player/assets/icons/video.ico"
+  ],
+  "fileAssociations": [
+    { "ext": "mp4", "name": "MP4 Video", "mimeType": "video/mp4", "role": "Viewer", "progId": "HybridPlayer.mp4" },
+    { "ext": "mkv", "name": "MKV Video", "mimeType": "video/x-matroska", "role": "Viewer", "progId": "HybridPlayer.mkv" },
+    { "ext": "webm", "name": "WebM Video", "mimeType": "video/webm", "role": "Viewer", "progId": "HybridPlayer.webm" },
+    { "ext": "avi", "name": "AVI Video", "mimeType": "video/x-msvideo", "role": "Viewer", "progId": "HybridPlayer.avi" },
+    { "ext": "mov", "name": "QuickTime Video", "mimeType": "video/quicktime", "role": "Viewer", "progId": "HybridPlayer.mov" },
+    { "ext": "mp3", "name": "MP3 Audio", "mimeType": "audio/mpeg", "role": "Viewer", "progId": "HybridPlayer.mp3" },
+    { "ext": "flac", "name": "FLAC Audio", "mimeType": "audio/flac", "role": "Viewer", "progId": "HybridPlayer.flac" },
+    { "ext": "wav", "name": "WAV Audio", "mimeType": "audio/wav", "role": "Viewer", "progId": "HybridPlayer.wav" },
+    { "ext": "ogg", "name": "OGG Audio", "mimeType": "audio/ogg", "role": "Viewer", "progId": "HybridPlayer.ogg" },
+    { "ext": "m4a", "name": "M4A Audio", "mimeType": "audio/mp4", "role": "Viewer", "progId": "HybridPlayer.m4a" }
+  ]
+}

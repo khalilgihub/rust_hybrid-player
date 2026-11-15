@@ -1,0 +1,27 @@
+[package]
+name = "hybrid-win32-shell"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+hybrid-core.workspace = true
+winit.workspace = true
+raw-window-handle.workspace = true
+windows = { workspace = true, features = [
+    "Foundation",
+    "Media",
+    "Storage_Streams",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_IO",
+    "Win32_System_Registry",
+    "Win32_System_Variant",
+    "Win32_System_WinRT",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_Shell_Common",
+    "Win32_UI_Shell_PropertiesSystem",
+] }
+windows-sys.workspace = true
+resvg.workspace = true
+thiserror.workspace = true

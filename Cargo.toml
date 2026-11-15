@@ -1,0 +1,94 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/mpv-engine",
+    "crates/win32-shell",
+    "crates/shaders",
+    "crates/media-services",
+    "crates/ui",
+    "crates/app",
+]
+
+[workspace.package]
+version = "12.6.0"
+edition = "2021"
+rust-version = "1.87"
+license = "MIT"
+
+[workspace.dependencies]
+hybrid-core = { path = "crates/core" }
+hybrid-mpv-engine = { path = "crates/mpv-engine" }
+hybrid-win32-shell = { path = "crates/win32-shell" }
+hybrid-shaders = { path = "crates/shaders" }
+hybrid-media-services = { path = "crates/media-services" }
+hybrid-ui = { path = "crates/ui" }
+
+winit = "0.30.13"
+raw-window-handle = "0.6.2"
+wgpu = "30.0.1"
+wgpu-hal = "30.0.1"
+windows = { version = "0.62.2", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Direct3D",
+    "Win32_Graphics_Direct3D11",
+    "Win32_Graphics_Direct3D12",
+    "Win32_Graphics_Dxgi",
+    "Win32_Graphics_Dxgi_Common",
+    "Win32_Graphics_Dwm",
+    "Win32_Graphics_Gdi",
+    "Win32_Graphics_OpenGL",
+    "Win32_Media",
+    "Win32_Security",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Com",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_JobObjects",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Pipes",
+    "Win32_System_Threading",
+    "Win32_UI_Controls",
+    "Win32_UI_HiDpi",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
+windows-sys = { version = "0.61.2", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Dwm",
+    "Win32_Graphics_Gdi",
+    "Win32_Graphics_OpenGL",
+    "Win32_Media",
+    "Win32_Security",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Com",
+    "Win32_System_DataExchange",
+    "Win32_System_JobObjects",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Memory",
+    "Win32_System_Pipes",
+    "Win32_System_Threading",
+    "Win32_UI_Controls",
+    "Win32_UI_HiDpi",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
+taffy = "0.15.1"
+cosmic-text = "0.19.0"
+parley = "0.12.0"
+resvg = "0.50.0"
+accesskit = "0.25.2"
+accesskit_winit = "0.34.2"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+tokio = { version = "1.54.1", features = ["full"] }
+tokio-tungstenite = "0.30.0"
+libloading = "0.9.0"
+sha1 = "0.11.0"
+sha2 = "0.11.1"
+image = "0.25.10"
+bytemuck = { version = "1.25.2", features = ["derive"] }
+rand = "0.10.3"
+reqwest = { version = "0.13.5", features = ["json", "rustls"] }
+url = "2.5.8"
+regex = "1.13.1"
+thiserror = "2.0.18"

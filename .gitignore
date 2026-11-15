@@ -1,0 +1,21 @@
+node_modules
+__pycache__/
+*.py[cod]
+find_windows.ps1
+inspect_win.js
+inspect_windows.ps1
+
+test-results/
+
+# Rust build artifacts (root workspace + qa harness)
+target/
+**/target/
+
+# Electron app lives in its own repo (github.com/khalilgihub/Video_player)
+hybrid-player/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log

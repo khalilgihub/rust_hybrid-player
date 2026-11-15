@@ -1,0 +1,238 @@
+{
+  "startedAt": "2026-11-12T09:57:10.716Z",
+  "captures": [
+    {
+      "file": "welcome-1280x720-dark.png",
+      "bytes": 37408,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "welcome-1280x720-oled.png",
+      "bytes": 36395,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "oled",
+      "bg": "dither"
+    },
+    {
+      "file": "welcome-1280x720-light.png",
+      "bytes": 35300,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "light",
+      "bg": "dither"
+    },
+    {
+      "file": "welcome-900x600-dark.png",
+      "bytes": 28200,
+      "innerWidth": 900,
+      "innerHeight": 600,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "welcome-900x600-oled.png",
+      "bytes": 27761,
+      "innerWidth": 900,
+      "innerHeight": 600,
+      "theme": "oled",
+      "bg": "dither"
+    },
+    {
+      "file": "welcome-900x600-light.png",
+      "bytes": 28162,
+      "innerWidth": 900,
+      "innerHeight": 600,
+      "theme": "light",
+      "bg": "dither"
+    },
+    {
+      "file": "welcome-640x360-dark.png",
+      "bytes": 21766,
+      "innerWidth": 640,
+      "innerHeight": 360,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "welcome-640x360-oled.png",
+      "bytes": 21170,
+      "innerWidth": 640,
+      "innerHeight": 360,
+      "theme": "oled",
+      "bg": "dither"
+    },
+    {
+      "file": "welcome-640x360-light.png",
+      "bytes": 21297,
+      "innerWidth": 640,
+      "innerHeight": 360,
+      "theme": "light",
+      "bg": "dither"
+    },
+    {
+      "file": "shader-dither-1280x720.png",
+      "bytes": 39036,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "shader-particles-1280x720.png",
+      "bytes": 21502,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "particles"
+    },
+    {
+      "file": "shader-faulty-1280x720.png",
+      "bytes": 241501,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "faulty"
+    },
+    {
+      "file": "shader-gridmotion-1280x720.png",
+      "bytes": 817146,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "gridmotion"
+    },
+    {
+      "file": "shader-none-1280x720.png",
+      "bytes": 21502,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "none"
+    },
+    {
+      "file": "modal-equalizerModal-1280x720.png",
+      "bytes": 44028,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "modal-speedModal-1280x720.png",
+      "bytes": 65385,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "modal-subtitleModal-1280x720.png",
+      "bytes": 68634,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "modal-audioModal-1280x720.png",
+      "bytes": 60977,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "modal-settingsModal-1280x720.png",
+      "bytes": 74720,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "modal-networkStreamModal-1280x720.png",
+      "bytes": 46510,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "modal-bgSettingsModal-1280x720.png",
+      "bytes": 43794,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "modal-bgAccordionPopover-1280x720.png",
+      "bytes": 93246,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "playlist-open-1280x720.png",
+      "bytes": 56598,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "overlay-clip-bezel-tab-1280x720.png",
+      "bytes": 42755,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "overlay-burst-pill-1280x720.png",
+      "bytes": 48301,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "overlay-screenshot-carousel-1280x720.png",
+      "bytes": 63045,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    },
+    {
+      "file": "playback-sample-1280x720.png",
+      "bytes": 292064,
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "theme": "dark",
+      "bg": "dither"
+    }
+  ],
+  "errors": [],
+  "finishedAt": "2026-11-12T09:57:43.487Z",
+  "particlesDiagnostics": {
+    "particleDiag": {
+      "hasFocus": true,
+      "bg": "particles",
+      "welcomeStateBg": "particles"
+    },
+    "canvasInfo": {
+      "exists": true,
+      "width": 1536,
+      "height": 816,
+      "opacity": "1",
+      "zIndex": "1",
+      "nonZeroPixels": 0
+    }
+  }
+}

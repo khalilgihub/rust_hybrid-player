@@ -1,0 +1,129 @@
+# CrabNebula `cargo-packager` configuration for Hybrid Player (Rust/Windows).
+# Parity source: `hybrid-player/electron-builder.json` + `hybrid-player/package.json`.
+#
+# Run `powershell -ExecutionPolicy Bypass -File packaging/stage-and-verify.ps1 -Stage`
+# before `cargo packager --release --config packaging/Packager.toml --formats nsis`
+# (or `--formats nsis,wix` when WiX is installed).
+
+name = "hybrid-player"
+product-name = "Hybrid Player"
+version = "12.6.0"
+identifier = "com.hybridplayer.app"
+description = "Next-generation desktop video player built in Rust — modern UI, 10-band equalizer, subtitle support, playlist management, and power-user features."
+authors = ["Hybrid Player Team"]
+license = "MIT"
+out-dir = "./dist"
+category = "Video"
+
+# Build the desktop shell binary and stage `win-unpacked` resources before packaging.
+before-packaging-command = "cargo build --release -p hybrid-app && powershell -ExecutionPolicy Bypass -File ./stage-and-verify.ps1 -Stage"
+
+icons = [
+  "../hybrid-player/assets/icons/icon.ico",
+  "../hybrid-player/assets/icons/icon.png",
+  "../hybrid-player/assets/icons/icon-linux.png",
+]
+
+[[binaries]]
+path = "staging/win-unpacked/Hybrid Player.exe"
+main = true
+
+# Staged resources mapped explicitly to `resources/{mpv,ffmpeg,assets}` inside `$INSTDIR`
+# so `installer.nsh` (`$INSTDIR\resources\assets\icons\...`) and
+# `hybrid_core::binary_resolver::BinarySearchPaths` (`<exe_dir>\resources\...`) resolve identically.
+resources = [
+  { src = "../hybrid-player/mpv/libmpv-2.dll", target = "resources/mpv/libmpv-2.dll" },
+  { src = "../hybrid-player/mpv/d3dcompiler_43.dll", target = "resources/mpv/d3dcompiler_43.dll" },
+  { src = "../hybrid-player/mpv/yt-dlp.exe", target = "resources/mpv/yt-dlp.exe" },
+  { src = "../hybrid-player/mpv/mpv.exe", target = "resources/mpv/mpv.exe" },
+  { src = "../hybrid-player/mpv/mpv.com", target = "resources/mpv/mpv.com" },
+  { src = "../hybrid-player/mpv/updater.bat", target = "resources/mpv/updater.bat" },
+  { src = "../hybrid-player/node_modules/ffmpeg-static/ffmpeg.exe", target = "resources/ffmpeg/ffmpeg.exe" },
+  { src = "../hybrid-player/node_modules/ffmpeg-static/ffmpeg.exe.LICENSE", target = "resources/ffmpeg/ffmpeg.exe.LICENSE" },
+  { src = "../hybrid-player/node_modules/ffmpeg-static/ffmpeg.exe.README", target = "resources/ffmpeg/ffmpeg.exe.README" },
+  { src = "../hybrid-player/assets/fonts", target = "resources/assets/fonts" },
+  { src = "../hybrid-player/assets/icons", target = "resources/assets/icons" },
+]
+
+# All 10 media file associations matching `hybrid-player/electron-builder.json`.
+[[fileAssociations]]
+extensions = ["mp4"]
+name = "MP4 Video"
+description = "MP4 Video"
+mimeType = "video/mp4"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["mkv"]
+name = "MKV Video"
+description = "MKV Video"
+mimeType = "video/x-matroska"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["webm"]
+name = "WebM Video"
+description = "WebM Video"
+mimeType = "video/webm"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["avi"]
+name = "AVI Video"
+description = "AVI Video"
+mimeType = "video/x-msvideo"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["mov"]
+name = "QuickTime Video"
+description = "QuickTime Video"
+mimeType = "video/quicktime"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["mp3"]
+name = "MP3 Audio"
+description = "MP3 Audio"
+mimeType = "audio/mpeg"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["flac"]
+name = "FLAC Audio"
+description = "FLAC Audio"
+mimeType = "audio/flac"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["wav"]
+name = "WAV Audio"
+description = "WAV Audio"
+mimeType = "audio/wav"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["ogg"]
+name = "OGG Audio"
+description = "OGG Audio"
+mimeType = "audio/ogg"
+role = "viewer"
+
+[[fileAssociations]]
+extensions = ["m4a"]
+name = "M4A Audio"
+description = "M4A Audio"
+mimeType = "audio/mp4"
+role = "viewer"
+
+[nsis]
+install-mode = "both"
+display-language-selector = false
+installer-icon = "../hybrid-player/assets/icons/icon.ico"
+installer-hooks = "./nsis/installer.nsh"
+
+[wix]
+language = "en-US"
+banner-path = "../hybrid-player/assets/icons/icon.png"
+dialog-image-path = "../hybrid-player/assets/icons/icon.png"
+enable-elevated-update-task = false
